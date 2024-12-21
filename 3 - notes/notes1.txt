@@ -13,13 +13,39 @@ Section 5:
 - Internal: 1 page: <style> p {background: blue} </style>, interesting to apply to one-pagers, however you'd normally have more pages, thus ...
 - External: 1 website: Having your css in an external file.
 
-html {
-    background: blue;
-}
+styles.css
+<link rel="stylesheet" href="./syles.css"/>
 
 selector {
     property: value;
 }
 
-styles.css
-<link rel="stylesheet" href="./syles.css"/>
+element-selector/class-selector/id-selector/attribute-selector/*-selector
+> please note that an id-selector should only be applied ONCE in a single html document!
+> while the class might be attributed to as many elements as you'd want 
+
+h1 {
+    color: blue;
+} 
+
+.red-heading {
+    color: red;
+}
+
+#main {
+    color: green;
+}
+
+p[withattribute] {
+    color: orange;
+}
+
+p[attribute="value"] {
+    color: pink;
+}
+
+* {
+    background: black;
+}
+
+<h2 class="red-heading">Haedertext</h2>
