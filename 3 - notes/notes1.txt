@@ -1,0 +1,25 @@
+Section 3:
+- Tags <p> </p> and self-closing "void" tags <img />, <br />
+- Specific and global attributes
+
+Section 4:
+- Absolute and relative paths
+    > "./directory/map1/me.png"
+    > <a href=""> <img src="" /> </a>
+
+Section 5:
+- CSS there to style, but also to seperate the clutter in the html code for organisation
+- Inline: 1 element: <p style="background: blue"> </p>, normally added to a single element, but normally not recommended.
+- Internal: 1 page: <style> p {background: blue} </style>, interesting to apply to one-pagers, however you'd normally have more pages, thus ...
+- External: 1 website: Having your css in an external file.
+
+html {
+    background: blue;
+}
+
+selector {
+    property: value;
+}
+
+styles.css
+<link rel="stylesheet" href="./syles.css"/>

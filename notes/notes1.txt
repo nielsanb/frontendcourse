@@ -1,9 +1,0 @@
-Section 3:
-- Tags <p> </p> and self-closing "void" tags <img />, <br />
-- Specific and global attributes
-
-Section 4:
-- Absolute and relative paths
-    > "./directory/map1/me.png"
-    > <a href=""> <img src="" /> </a>
-
