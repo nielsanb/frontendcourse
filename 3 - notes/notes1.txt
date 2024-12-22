@@ -1,13 +1,13 @@
-Section 3:
+Section 3: Void tags
 - Tags <p> </p> and self-closing "void" tags <img />, <br />
 - Specific and global attributes
 
-Section 4:
+Section 4: Paths, <a> and <img>
 - Absolute and relative paths
     > "./directory/map1/me.png"
     > <a href=""> <img src="" /> </a>
 
-Section 5:
+Section 5: CSS inline, internal and external
 - CSS there to style, but also to seperate the clutter in the html code for organisation
 - Inline: 1 element: <p style="background: blue"> </p>, normally added to a single element, but normally not recommended.
 - Internal: 1 page: <style> p {background: blue} </style>, interesting to apply to one-pagers, however you'd normally have more pages, thus ...
@@ -49,3 +49,30 @@ p[attribute="value"] {
 }
 
 <h2 class="red-heading">Haedertext</h2>
+
+Section 6: Styling
+A. colors:
+hex and names
+https://colorhunt.co/
+
+B. Font-size
+- px, pt, em, rem 
+- 1px is approx 0.26 mm (i.e. 4px is about 1mm)
+- 1pt is approx 0.35 mm (i.e. 3pt is about 1mm)
+
+- em is relative to the parent element
+- rem is relative to the ROOT (most of the times the html tag)
+
+- Instructor advices to use rem.
+
+C. Font-weigth
+- light to bold
+- is on the background along the range of 100-900
+- lighter (-100)
+- bolder (+100)
+
+D. Font-family
+- Serif and sans-serif (without), note that there are generic backups 
+for whenever there's something that goes wrong.
+- https://fonts.google.com/
+- 
