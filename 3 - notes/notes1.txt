@@ -106,6 +106,8 @@ for whenever there's something that goes wrong.
 - Which one is higher up at the hierarchy? Which will get applied? Which is more important?
 
 - 4 rules: 
+    - Note that the bottom one is most imporant!
+
     1. Position:
                  lower > higher 
                  
@@ -128,7 +130,7 @@ for whenever there's something that goes wrong.
 
                 i.e. inline over the others!
                 note that this actually is also from specific to generic right?
-                
+
     4. Important helper
         color: green !important;
         The important helper overrules always everything
@@ -139,3 +141,4 @@ for whenever there's something that goes wrong.
     <h1 class="a-class b-class"> Hello </h1>
     - Note that the order in the css-file determines which one is applied. (i.e. NOT the order in the element itself!)
 
+- You left at minute 18:45
