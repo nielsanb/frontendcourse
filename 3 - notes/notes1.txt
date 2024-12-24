@@ -1,13 +1,13 @@
-Section 3: Void tags
+*** Section 3: Void tags ***
 - Tags <p> </p> and self-closing "void" tags <img />, <br />
 - Specific and global attributes
 
-Section 4: Paths, <a> and <img>
+*** Section 4: Paths, <a> and <img> ***
 - Absolute and relative paths
     > "./directory/map1/me.png"
     > <a href=""> <img src="" /> </a>
 
-Section 5: CSS inline, internal and external
+*** Section 5: CSS inline, internal and external ***
 - CSS there to style, but also to seperate the clutter in the html code for organisation
 - Inline: 1 element: <p style="background: blue"> </p>, normally added to a single element, but normally not recommended.
 - Internal: 1 page: <style> p {background: blue} </style>, interesting to apply to one-pagers, however you'd normally have more pages, thus ...
@@ -50,7 +50,9 @@ p[attribute="value"] {
 
 <h2 class="red-heading">Haedertext</h2>
 
-Section 6: Styling
+*** Section 6: Styling ***
+*** 6.1/6.2
+
 A. colors:
 hex and names
 https://colorhunt.co/
@@ -76,3 +78,22 @@ D. Font-family
 for whenever there's something that goes wrong.
 - https://fonts.google.com/
 - 
+
+*** 6.3
+- Developer tools
+- To inspect websites, to see what they used/do.
+
+- Note that there is a button to find elements in a page at the left-top of the developers tools.
+- Note that in the Element -> Styles pages, some lines are stripedthrough. These are overruled by another css line somewhere!
+- If you go to the Element -> Computed tab, you can see what is truely applied to a certain element.
+- (...) -> More tools -> CSS overview for an overview
+
+*** 6.4 The box model:
+- Note that the width and heigth are set on the element itself. In addition you should add the padding, border and margin to know the full with of the whole box.
+- In the developertools you can see the box!
+
+*** 6.5 Centering stuff:
+- If you want to center (mirrored) stuff:
+    1. Make a div
+    2. Set the div's width to a percentage (lets say 50%)
+    3. Divide the remainer by 2 (i.e. 25%) and put that as margin left.
