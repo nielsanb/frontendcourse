@@ -1,0 +1,85 @@
+*** VIDEO: The Only CSS Layout Guide You'll Ever Need ***
+
+** 0. Links
+>> https://www.youtube.com/watch?v=i1FeOOhNnwU
+>> https://piratefsh.github.io/how-to/2016/01/27/how-to-think-in-css.html
+>> https://yoksel.github.io/flex-cheatsheet/
+
+
+** 1. Introduction
+>> content-box vs. border-box
+content-box: only the most inside (excluding padding, border and margin) 
+vs. 
+border-box: including the padding and border (still excluding the margin)
+
+>> think about blocks/boxes, and think from the top and then horizontally (i.e. from left to right, because divs naturally stack on top of eachother)
+
+>> parent-child relationships
+
+>> pesticide plugin
+
+>> perhaps the smallest width to design for in 320px (approx)
+
+
+** 2. Flexbox
+Every item in flexbox is in relation to eachother. 
+That is, if you'd take out an element, the rest will align.
+
+Flexbox is much more easy to maintain, compared to classic absolute and relative positioning
+
+Most important flexbox items
+
+.parent {
+    display: 'flex';
+    justify-content: 'flex-start';
+    align-items: 'stretch'
+}
+
+
+** 3. Grid
+Is a grid ###.
+
+In typescript (.tsx):
+{General settings}
+<Box 
+    display="grid"
+    gridTemplateColumns="repeat(15, 1fr)"
+    gridAutoRows="150px"
+    gap="20px"
+>
+
+{1st of many boxes}
+<Box 
+    gridColumn="span 3"
+    gridRow="span 1" (actually not necessary!)
+    backgroundColor={colors.primary[400]}
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+>
+
+>> There is also something like gridtemplateareas.
+>> Where you can asign each grid section literally with letters
+e.g. for a (6x3) grid
+
+a b c
+a b c
+a b c
+a d f
+a d f
+e d f
+
+
+** 4. Mediaqueries
+>> In addition you sometimes you need media-queries. 
+>> The nice thing about flexbox is that you could just remove the flex from a set of horizontally arranged boxes, and then it will naturally stack on top of eachother.
+
+
+** 5. Absolute and relative 
+>> Are not some commonly used when dealing with corporate level applications
+
+>> You might use it in 'design-based websites'. Where positions are a bit more odd.
+
+>> You might use it when you want to put something on top of something else.
+
+>> Or if some elements should be specifically tied to eachother.
