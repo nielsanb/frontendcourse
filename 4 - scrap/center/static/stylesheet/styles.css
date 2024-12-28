@@ -1,0 +1,19 @@
+.main-container {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.inner-container {
+    margin: 0;
+    padding: 25px;
+}
+
+.aa {
+    background-color: blue;
+}
+
+.zz {
+    background-color: red;
+}
+
+

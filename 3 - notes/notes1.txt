@@ -141,4 +141,27 @@ for whenever there's something that goes wrong.
     <h1 class="a-class b-class"> Hello </h1>
     - Note that the order in the css-file determines which one is applied. (i.e. NOT the order in the element itself!)
 
-- You left at minute 18:45
+*** 7.2: combining several selectors ***
+
+- We can combine selectors to target more specific things:
+    - a, b {} -> select both a and b
+    - a > b {} -> select any b's that are a direct child of a 
+    - a b {} -> select all b's that are a child of a, at any level!
+    - li.done {} -> select li's that ALSO have a class of done
+    - ul p.done {} -> select all p's that are a child of ul's, and have a class of done.
+
+*** 7.3: Basic CSS positioning ***
+- Position: Static;
+- Static, relative, absolute, fixed
+    > Static: Default value, where it should be according to the standard html. (note that you dont not have to apply per se)
+    > Relative: Is relative TO ITS DEFAULT static position, where it should be (i.e. not to some specific other element!)
+    > Absolute: Absolute Relative to its NEASREST POSITIONED (i.e. with the position property set) ancestor. E.g. when a div is within a div.
+        > Please note if none of the ancestors have a position, then it is to the corner of the PAGE!
+        > Plaase note that it thus needs a positioned ancestor to work!
+    > Fixed: Fixed to the top-left of the BROWSER. 
+        > and thus that is is independent of scroling.
+- Z-index -> What goes on top of what?
+    > The z-index determines what goes on top of what on the z-axis.
+    > z-index = 1, z-index = -1 (default = 0)
+    > 
+- Please note that all values apply to the TOPLEFT corner of the thing you are positioning!
