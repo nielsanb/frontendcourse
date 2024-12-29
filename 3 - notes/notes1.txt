@@ -164,4 +164,13 @@ for whenever there's something that goes wrong.
     > The z-index determines what goes on top of what on the z-axis.
     > z-index = 1, z-index = -1 (default = 0)
     > 
+
+Notes:
 - Please note that all values apply to the TOPLEFT corner of the thing you are positioning!
+- Please note that PERCENTAGES are typically set against the PARENT element!
+- Let op! Je kunt beter denken in elementen die op elkaar liggen, dan alle blokjes los van elkaar zien.
+    > bv. bij de vlag zijn er 'twee balken van rood', maar dat is 'een rood blok dat achter het blauwe ligt'.
+    > note that div.flag > div, could sometimes also be .flag div {}
+- often the parent has a position: relative; and the child the position: absolute; 
+    > remember that in order for the latter to work you need to have the parent set!
+- http://lascarid.es/fussyflags/
