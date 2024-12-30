@@ -26,4 +26,8 @@ Register the blueprints in the __init__.py file
 
 Set the first routes and their functions
     > '/', '/login', '/logout', '/signup'
+
+Setup the first .html files in templates
+    > base.html
+    > 
     

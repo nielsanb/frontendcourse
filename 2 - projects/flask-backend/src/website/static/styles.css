@@ -1,0 +1,141 @@
+:root {
+    --colordark: #0A3043;
+    --colormain: #7E99A3;
+    --colorsecond: #A5BFCC;
+    --colorlight: #FFF7E2;
+    --colorwhite: #F9F9FF;
+    --colorattention: #FB5B2B;
+    --colorattentionsecond: #A72F17;
+}
+
+body {
+    background-color: var(--colorlight);
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal; 
+    font-size: 16px;
+    text-decoration: none;
+}
+
+a {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal; 
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--colordark)
+}
+
+#logo-click {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--colorattentionsecond);
+    font-size: 18px;
+}
+
+#logo-raiders {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--colorattention);
+    font-size: 18px;
+}
+
+#logo-com {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: var(--colordark);
+    font-size: 18px;
+    padding-right: 50px;
+}
+
+#homeimage {
+    border-radius: 10px;
+    box-shadow: 10px 10px var(--colorattentionsecond);
+    width: 225px; 
+    height: 300px; 
+    object-fit: cover;
+}
+
+.head-container, .nav-container, .main-container, .footer-container, .second-container, .third-container {
+    width: 100%;
+    padding: 10px;
+}
+
+.head-container {
+    width: 100%;
+    padding: 0;
+    background-color: var(--colordark);
+    height: 50px;
+    color: var(--colorwhite);
+    text-align: center;
+}
+
+.nav-container {
+    background-color: var(--colorlight);
+    height: 100px;
+    padding-bottom: 10px;
+}
+
+.main-container {
+    background-color: var(--colorlight);
+    height: 600px;
+    padding-top: 30px;
+}
+
+.second-container {
+    background-color: var(--colorsecond);
+    height: 400px;
+}
+
+.third-container {
+    background-color: var(--colorlight);
+    height: 300px;
+}
+
+.fourth-container {
+    background-image: url("./images/notepad.jpg");
+    background-size: cover;
+    height: 500px;
+}
+
+.fifth-container {
+    background-color: var(--colorlight);
+    height: 300px;
+}
+
+.footer-container {
+    background-color: var(--colordark);
+    height: 300px;    
+}
+
+.button-cta {
+    background-color: var(--colorattention);
+    border: none;
+    width: 100px;
+    height: 33px;
+    border-radius: 10px;
+}
+
+.spectral-bold-title {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.karla-global {
+    font-family: "Karla", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}

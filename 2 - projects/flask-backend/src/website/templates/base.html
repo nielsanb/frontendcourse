@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Spectral:wght@700&display=swap" rel="stylesheet">
+
+    <title>{%block title %} {% endblock %}</title>
+</head>
+<body>
+    <div class="head-container"> Placeholder txt</div>
+    <div class="nav-container">
+        <div id="logo"> 
+            <img src="../static/images/logo.jpg" width="60" alt="Company logo containing a globe and a cursor" />
+        </div>
+        <div class="logo-txt yeseva-one-regular-headers-font" > 
+            <span id="logo-click">Note</span><span id="logo-raiders">clicker</span><span id="logo-com">.com</span>
+        </div>
+        
+        <div class="navbar">
+            <a href="" class="navbar-item">Home</a>
+            <a href="" class="navbar-item">About</a>
+            <a href="" class="navbar-item">Notes</a>
+            <a href="" class="navbar-item">Contact</a>
+            <button class="button-cta"><a href="" class="navbar-item">Login</a></button>
+        </div>
+
+
+    </div>
+    <div class="main-container">
+        {% block maincontainer %}
+
+        {% endblock %}
+    </div>
+    
+    <div>
+        {% block extendedcontainers %}
+
+        {% endblock %}
+    </div>
+
+    <div class="footer-container">
+        Placeholder txt
+    </div>
+</body>
+</html>
