@@ -1,0 +1,66 @@
+*** Section 8: Advanced CSS ***
+*** 48 Display ***
+
+- block, inline, inline-block, none
+    > most element have by default the block setting.
+    > BLOCK -> every new items goes below the previous.
+        > if object does not fit (e.g. by setting px), it will create a scrollbar.
+        > please note that if you do NOT set the width it defaults to 100%, and therefore it will break into the next line.
+
+    > INLINE -> Every item gets pasted behind eachother
+        > and also breaks into the next line if the object does not fit. 
+        > Like text in word.
+        > You canNOT set width and heigth. They will deafult to the size of their content.
+
+    > BLOCK-INLINE -> If the complete element fits the line, it will stay. If not fit complete, it goes below.
+        > and if still not fit, it will create the scrollbar.
+
+    > NONE -> disappear
+
+- Another way to say it:
+    > blocks stack vertically/below eachother
+    > inline-blocks stack horizontally/nexttoeachother (if it fit completely), and else go below.
+    > inline stacks horizontally/nexttoeachother, and break to the next line (also partially!). Yet an inline element does not remain its size, but only the size of its content.
+
+- span element
+    > display property of <span> </span> is by default inline
+
+- Please note that some elements have by default some margin (h1, h2, p), while others dont (div).
+- Please note that sometimes whitespace appears between two inline elements, because it is interpreted as a 'spatie/space'.
+
+*** 49 CSS float ***
+- To wrap text around an element. Like you know from word, when you want an image.
+    > Please note that for creating layouts in modern websites, you typically would go for better tools like flexbox, grid and bootstrap!
+    > Teacher recommends to ONLY use float only for wrapping text around an element.
+- It works when e.g. you would want a 'misshapen L' that would be impossible to make with just the display options.
+
+float: left;
+float: right;
+
+clear: left;
+clear: both;
+
+*** 50 How to create responsive websites ***
+- Big Screen, laptop, tablet, mobile phones
+- Voorbeeld: https://tastybasics.nl/
+    > onder 1280: menubar -> hamburger
+    > onder 992: 4 columns -> 2x2 columns
+    > onder 768: 
+            > navigation at footer disappears
+            > formfields go on top of eachother instead of side by side.
+            > leuke visuals naast 1 column gaan weg.
+            > producten die eerst in 2-column zaten gaan nu naar slider. (andere dingen nog wel 2-column till the end!)
+
+    > belangrijke text, is op pc al 1 column met een icon erboven (met wat leuke visuals links en rechts)
+    > Afwisseling tussen main-1-columner, 2x2-columner die altijd blijft, slider op mobile
+    
+    > Coole scroll effects: 
+        > box met plaatje die van border-radius: 50%; naar border-radius: 0 gaat
+        > zijplaatjes die op een andere snelheid bewegen dan het scrollen.
+        > Titels op achtergrond die meesliden tot einde van de div is bereikt.
+        > Titels die op de pagina komen.
+        > loading elementje
+        
+    > menuhamburger heeft een kleine visual-vertraging
+        > binnen menu nog meer uitklappers
+        > wordt met een '-active' flag gewerkt.

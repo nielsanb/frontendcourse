@@ -1,0 +1,29 @@
+Do the installs
+    > pip install flask
+    > pip install flask-login
+    > pip install flask-sqlalchemy
+
+Do the boilerplate
+    > Make the project structure 
+    > Make the setup.py
+    > pip install -e .
+    > (if the interpreter of VSC is wrong -> [ctrl + shift + p] -> [python select interpreter] -> select the right interpreter )
+
+Create the first __init__.py en main.py file
+    > create an function that instanciates the flask app in the __init__.py
+    > set the secret (perhaps from a configfile)
+    > import and run that function in main.py, and set the __name__ == __main__: app.run
+
+Set the blueprints in the views.py and the auth.py file
+    > from flask import Blueprint
+    > Blueprint makes sure that you dont have to set all routes in one file, you can spread them (such as over views.py and auth.py)
+    > also do this in the auth.py file!
+
+Register the blueprints in the __init__.py file
+    > different than working without blueprints, you now need to register them
+    > make sure their names are different in the seperate files
+    > note that you might set an url_prefix
+
+Set the first routes and their functions
+    > '/', '/login', '/logout', '/signup'
+    
