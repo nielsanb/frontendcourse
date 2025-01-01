@@ -15,18 +15,22 @@
     <div class="head-container"> Placeholder txt</div>
     <div class="nav-container">
         <div id="logo"> 
-            <img src="../static/images/logo.jpg" width="60" alt="Company logo containing a globe and a cursor" />
+            <img src="../static/images/logont.png" width="60" alt="Company logo containing a globe and a cursor" />
         </div>
         <div class="logo-txt yeseva-one-regular-headers-font" > 
-            <span id="logo-click">Note</span><span id="logo-raiders">clicker</span><span id="logo-com">.com</span>
+            <span id="logo-click">Note</span><span id="logo-raiders">taker</span><span id="logo-com">.com</span>
         </div>
         
         <div class="navbar">
-            <a href="" class="navbar-item">Home</a>
+            <a href="{{ url_for('views.home') }}" class="navbar-item">Home</a>
             <a href="" class="navbar-item">About</a>
             <a href="" class="navbar-item">Notes</a>
             <a href="" class="navbar-item">Contact</a>
-            <button class="button-cta"><a href="" class="navbar-item">Login</a></button>
+            {% if loggedin == True %}
+            <button class="button-cta"><a href="{{ url_for('auth.logout') }}" class="navbar-item">Logout</a></button>
+            {% else %}
+            <button class="button-cta"><a href="{{ url_for('auth.login') }}" class="navbar-item">Login</a></button>
+            {% endif %}
         </div>
 
 

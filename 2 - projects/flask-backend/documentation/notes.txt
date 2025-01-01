@@ -29,5 +29,46 @@ Set the first routes and their functions
 
 Setup the first .html files in templates
     > base.html
-    > 
-    
+    > home.html
+        > {% extends 'base.html' %}
+        > {% block content %} {% endblock %}
+        > {{ variable }}
+    > login.html, signup.html
+    > use render_template('home.html', variable=value) function to use the html.
+    > use the {{ url_for(auth.login) }} in the html files
+    > use the {% if a==b %} {% elif %} {% else %} {% endif %}
+
+Make the signup-page
+    > Make a form, with the method="POST"!
+    > Note that everything (the h3, label, input, div and button) go within the form!
+    > The form contains <divs> with <label>,<input> combinations.
+    > The form ends with a button:
+        > <button type="submit"> Register </button>
+
+    <form method="POST">
+        <h3> This is a form </h3>
+        <div> 
+            <label for="email">Email Adress</label>
+            <input 
+                type="email"
+                class="" 
+                id="email" 
+                name="email" 
+                placeholder="Email"
+            />
+        </div>
+        <div>
+            <label for="firstname">Firstname</label>
+            <input 
+                type="text"
+                class=""  
+                id="firstname" 
+                name="firstname" 
+                placeholder="Firstname"
+            />
+        </div>
+        <button type="submit"> Register </button>
+    </form>
+
+Make the signup-page accept a POST-request
+
