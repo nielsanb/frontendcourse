@@ -1,33 +1,42 @@
-Do the installs
+0. Do the installs
     > pip install flask
     > pip install flask-login
     > pip install flask-sqlalchemy
 
-Do the boilerplate
+1. Do the boilerplate
     > Make the project structure 
     > Make the setup.py
+
+        from setuptools import setup, find_packages
+
+        setup(
+            name='website',
+            version='0.1',
+            packages=find_packages()
+        )
+
     > pip install -e .
     > (if the interpreter of VSC is wrong -> [ctrl + shift + p] -> [python select interpreter] -> select the right interpreter )
 
-Create the first __init__.py en main.py file
+2. Create the first __init__.py en main.py file
     > create an function that instanciates the flask app in the __init__.py
     > set the secret (perhaps from a configfile)
     > import and run that function in main.py, and set the __name__ == __main__: app.run
 
-Set the blueprints in the views.py and the auth.py file
+3. Set the blueprints in the views.py and the auth.py file
     > from flask import Blueprint
     > Blueprint makes sure that you dont have to set all routes in one file, you can spread them (such as over views.py and auth.py)
     > also do this in the auth.py file!
 
-Register the blueprints in the __init__.py file
+4. Register the blueprints in the __init__.py file
     > different than working without blueprints, you now need to register them
     > make sure their names are different in the seperate files
     > note that you might set an url_prefix
 
-Set the first routes and their functions
+5. Set the first routes and their functions
     > '/', '/login', '/logout', '/signup'
 
-Setup the first .html files in templates
+6. Setup the first .html files in templates
     > base.html
     > home.html
         > {% extends 'base.html' %}
@@ -38,12 +47,13 @@ Setup the first .html files in templates
     > use the {{ url_for(auth.login) }} in the html files
     > use the {% if a==b %} {% elif %} {% else %} {% endif %}
 
-Make the signup-page
+7. Make the signup-page, and login-page.
     > Make a form, with the method="POST"!
     > Note that everything (the h3, label, input, div and button) go within the form!
     > The form contains <divs> with <label>,<input> combinations.
     > The form ends with a button:
         > <button type="submit"> Register </button>
+    > Make the signup-page IN THE auth-views accept a POST-request
 
     <form method="POST">
         <h3> This is a form </h3>
@@ -70,5 +80,28 @@ Make the signup-page
         <button type="submit"> Register </button>
     </form>
 
-Make the signup-page accept a POST-request
+8. Handling of the requests.
+    > Data can be catched by the request.form object.
+    > Individual items can be catched by request.form.get('variable')
+        > Please note that the input name='' variable (in the html form) is carried.
+    > We can write simple comparisons, and validations. In an if-else.
 
+9. Flask flash messages
+    > from flask import flash
+    > flash('message', category='error/success')
+    > display them on your page!
+    
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %}
+            {% for category, message in messages %}
+                {% if category == 'error' %}
+                    <div role="alert"> 
+                        {{ message }}
+                        <button type="button" data-dismiss="alert">
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+10. 

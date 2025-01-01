@@ -12,11 +12,21 @@
     <title>{%block title %} {% endblock %}</title>
 </head>
 <body>
-    <div class="head-container"> Placeholder txt</div>
+    <!-- Head container -->
+    <div class="head-container"> 
+        <div>
+            <p>
+                SALE! Register now, and get <span style="text-decoration: underline;"> 3 months for free </span> on a yearly subscription!
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation container -->
     <div class="nav-container">
         <div id="logo"> 
             <img src="../static/images/logont.png" width="60" alt="Company logo containing a globe and a cursor" />
         </div>
+        
         <div class="logo-txt yeseva-one-regular-headers-font" > 
             <span id="logo-click">Note</span><span id="logo-raiders">taker</span><span id="logo-com">.com</span>
         </div>
@@ -32,9 +42,9 @@
             <button class="button-cta"><a href="{{ url_for('auth.login') }}" class="navbar-item">Login</a></button>
             {% endif %}
         </div>
-
-
     </div>
+
+    <!-- Main container -->
     <div class="main-container">
         {% block maincontainer %}
 
@@ -47,6 +57,7 @@
         {% endblock %}
     </div>
 
+    <!-- Footer container -->
     <div class="footer-container">
         Placeholder txt
     </div>
