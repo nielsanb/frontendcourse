@@ -4,23 +4,23 @@
 
 {% block content %}
     <h1>Login</h1>
-    <form>
+    <form method="POST">
         <label>Email</label>
         <input 
             type="email"
             placeholder="random@random.com"
-            id="login-email"
-            name="login-email"
+            id="login_email"
+            name="login_email"
             />
         <br><br>
         <label>Password</label>
         <input
             type="password"
             placeholder="password"
-            id="login-password"
-            name="login-password"
+            id="login_password"
+            name="login_password"
         />
         <br><br>
-        <button type="submit"> Login </button>
+        <button type="submit" method="post"> Login </button>
     </form>
 {% endblock %}

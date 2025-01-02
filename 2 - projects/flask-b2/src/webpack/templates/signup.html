@@ -3,53 +3,53 @@
 {% block title %} Signup {% endblock %}
 
 {% block content %}
-<h1>
-    Signup
-</h1>
-<form>
-    <form>
+    <h1>
+        Signup
+    </h1>
+
+    <form method="POST">
         <label>Firstname</label>
         <input 
             type="text"
             placeholder="Firstname"
-            id="signup-firstname"
-            name="signup-firstname"
+            id="signup_firstname"
+            name="signup_firstname"
             />
         <br><br>
         <label>Age</label>
         <input 
             type="number"
             placeholder="Age"
-            id="signup-age"
-            name="signup-age"
+            id="signup_age"
+            name="signup_age"
             />
         <br><br>
         <label>Email</label>
         <input 
             type="email"
             placeholder="random@random.com"
-            id="signup-email"
-            name="signup-email"
+            id="signup_email"
+            name="signup_email"
             />
         <br><br>
         <label>Password</label>
         <input
             type="password"
             placeholder="password"
-            id="signup-password"
-            name="signup-password"
+            id="signup_password"
+            name="signup_password"
         />
         <br><br>
         <label>Confirm Password</label>
         <input
             type="password"
             placeholder="password"
-            id="signup-password"
-            name="signup-password"
+            id="signup_password_confirmation"
+            name="signup_password_confirmation"
         />
         <br><br>
         <button type="submit"> Register </button>
     </form>
-</form>
+
 {% endblock %}
 

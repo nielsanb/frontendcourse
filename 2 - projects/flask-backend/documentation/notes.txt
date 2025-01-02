@@ -48,7 +48,7 @@
     > use the {% if a==b %} {% elif %} {% else %} {% endif %}
 
 7. Make the signup-page, and login-page.
-    > Make a form, with the method="POST"!
+    > Make a FORM, with the method="POST"!
     > Note that everything (the h3, label, input, div and button) go within the form!
     > The form contains <divs> with <label>,<input> combinations.
     > The form ends with a button:
