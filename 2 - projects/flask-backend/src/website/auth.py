@@ -21,6 +21,7 @@ def signup():
         #Catch the input
         email = request.form.get('signup_email')
         firstname = request.form.get('signup_firstname')
+        age = request.form.get('signup_age')
         signuppassword = request.form.get('signup_password')
         confirmationpassword = request.form.get('signup_password_confirmation')
 
@@ -29,6 +30,8 @@ def signup():
             flash('Email should be greater than 5 characters', category='error')
         elif len(firstname) < 2:
             flash('Firstname should be greater than 1 character', category='error')
+        elif len(age) < 1:
+            flash('Age invalid', category='error')
         elif len(signuppassword) < 8:
             flash('Password must be at least 8 characters long', category='error')
         elif signuppassword != confirmationpassword:
