@@ -2,7 +2,6 @@ from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
-
 from webpack.models import User
 from webpack import db 
 
@@ -34,10 +33,10 @@ def signup():
         db.session.add(new_user)
         db.session.commit()
 
-        return redirect(url_for('auth.account'))
+        return redirect(url_for('auth.account', user=current_user))
 
 
-    return render_template('signup.html')
+    return render_template('signup.html', user=current_user)
 
 @auth.route('/login', methods=["GET", "POST"])
 def login():
@@ -51,7 +50,7 @@ def login():
             if check_password_hash(user.password, login_password):
                 pass #user exists, password correct
                 login_user(user, remember=True)
-                return redirect(url_for('auth.account'))
+                return redirect(url_for('auth.account', user=current_user))
             else:
                 pass #user exists, password wrong
         
@@ -60,16 +59,16 @@ def login():
 
         print(login_email, login_password)
 
-    return render_template('login.html')
+    return render_template('login.html', user=current_user)
 
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('auth.login'))
+    return redirect(url_for('auth.login', user=current_user))
 
 
 @auth.route('/account')
 @login_required
 def account():
-    return render_template('account.html')
+    return render_template('account.html', user=current_user)
