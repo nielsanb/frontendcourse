@@ -86,7 +86,7 @@
         > Please note that the input name='' variable (in the html form) is carried.
     > We can write simple comparisons, and validations. In an if-else.
 
-9. Flask flash messages
+9. Flask flash messages.
     > from flask import flash
     > flash('message', category='error/success')
     > display them on your page!
@@ -104,4 +104,75 @@
         {% endif %}
     {% endwith %}
 
-10. 
+    > Suggestively make one place where these appear in the base.html
+
+10. Connecting a database: Add the database to the __init__.py
+    > from flask_sqlalchemy import SQLAlchemy
+    > db = SQLAlchemy()
+    > DB_NAME = 'database.db'
+    > app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlte:///{DB_NAME}'
+    > db.init_app(app)
+        > please note that we need to import the models (of the next step) before running the init!
+
+11. Create models.py (for users, and notes)
+    > Notes will be more plain than users, because for Flask to use their login_module, we want user to inherit from a flask UserMixin object.
+        > See later the current_user object!
+
+    > Imports
+        > from package import db (the thing you created in the __init__.py)
+        > from flask_login import UserMixin
+        > (for the date from sqlalchemy.sql import func -> func.now())
+
+    > Vervolgens maak je in principe classes that inherit from db.Model
+        > class Notes(db.Model):
+            id = db.Column(db.Integer, primary_key=True)
+            ...
+            ...
+
+    > Voor de relaties:
+        > user_id = db.Column(db.Integer, db.Foreignkey('user.id'))
+        > notes = db.relationship('Note')
+
+12. Create the tables in the __init__.py from the models you created
+    from website.models import User, Note
+
+    with app.app_context():
+        if not path.exists('webpack/' + DB_NAME): <WERKT NOG NIET GOED!>
+            db.create_all()
+            print('Created Database!')
+
+13. In the auth.py make a User object with the catched variables from the form-post, and save it to the database.
+    > new_user = website.models.User(var=var)
+    > db.session.add(new_user)
+    > db.session.commit()
+
+    > Install plugin: SQLite Viewer (Florian Klampfer)
+
+    13B.
+    > Make sure the password is saved hashed
+    > from werkzeug.security import generate_password_hash, check_password_hash
+    > use this when creating new_user
+
+    13C. Alternative: If you want to go hardcore via plain SQL:
+    > See for a raw SQL example: https://stackoverflow.com/questions/62568478/how-to-set-sqlalchemy-database-uri
+    > https://stackoverflow.com/questions/64785905/why-is-check-password-hash-function-returning-false-using-flask-sqlite3-and-we
+
+14. Redirect and render the next page, with a flash message.
+    > Should be clear now
+
+
+
+15. Build the login, that checks the incomming data against the database, and logs the user in with the flask_login module
+    > from flask_login import login_user, login_required, logout_user, current_user
+    > user = User.query.filter_by(email=login_email).first()
+    > login_user(user, remember=True)
+    > Zie de remember=True, blijft je onthouden tot je uitlogt.
+
+    15b. For the login module to work, you need a #Login Manager in the __init__.py
+
+
+16. Make pages login required with the @login_required
+
+17. Use the current_user object to take elements from it
+
+18. Check developer-tools for the cookies that are used!

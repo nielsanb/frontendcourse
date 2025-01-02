@@ -4,6 +4,7 @@
     > DB_NAME = 'database.db'
     > app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlte:///{DB_NAME}'
     > db.init_app(app)
+        > please note that we need to import the models (of the next step) before running the init!
 
 1. Create models (for users, and notes)
     > Notes will be more plain than users, because for Flask to use their login_module, we want user to inherit from a flask UserMixin object.

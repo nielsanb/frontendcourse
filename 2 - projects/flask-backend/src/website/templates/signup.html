@@ -50,21 +50,6 @@
             />
         </div>
         <br>
-
-        <!-- flashing messages -->
-        {% with messages = get_flashed_messages(with_categories=true) %} 
-        {% if messages %}
-            {% for message in messages %}
-            <div role="alert"> 
-                {{ message }}
-
-                <!-- <button type="button" data-dismiss="alert"> -->
-            </div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-        
-        <br>
         <div>
         <button type="submit"> Register </button>
         </div>
