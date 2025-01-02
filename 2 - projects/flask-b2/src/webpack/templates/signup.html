@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Signup {% endblock %}
+
+{% block content %}
+<h1>
+    Signup
+</h1>
+<form>
+    <form>
+        <label>Firstname</label>
+        <input 
+            type="text"
+            placeholder="Firstname"
+            id="signup-firstname"
+            name="signup-firstname"
+            />
+        <br><br>
+        <label>Age</label>
+        <input 
+            type="number"
+            placeholder="Age"
+            id="signup-age"
+            name="signup-age"
+            />
+        <br><br>
+        <label>Email</label>
+        <input 
+            type="email"
+            placeholder="random@random.com"
+            id="signup-email"
+            name="signup-email"
+            />
+        <br><br>
+        <label>Password</label>
+        <input
+            type="password"
+            placeholder="password"
+            id="signup-password"
+            name="signup-password"
+        />
+        <br><br>
+        <label>Confirm Password</label>
+        <input
+            type="password"
+            placeholder="password"
+            id="signup-password"
+            name="signup-password"
+        />
+        <br><br>
+        <button type="submit"> Register </button>
+    </form>
+</form>
+{% endblock %}
+

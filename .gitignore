@@ -2,3 +2,4 @@
 *.pyc
 2 - projects/flask-backend/venv/*
 2 - projects/flask-backend/website.egg-info/*
+2 - projects/*/venv/*

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} Login {% endblock %}
+
+{% block content %}
+    <h1>Login</h1>
+    <form>
+        <label>Email</label>
+        <input 
+            type="email"
+            placeholder="random@random.com"
+            id="login-email"
+            name="login-email"
+            />
+        <br><br>
+        <label>Password</label>
+        <input
+            type="password"
+            placeholder="password"
+            id="login-password"
+            name="login-password"
+        />
+        <br><br>
+        <button type="submit"> Login </button>
+    </form>
+{% endblock %}
