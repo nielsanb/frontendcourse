@@ -8,8 +8,8 @@
             <label for="email">Email Adress</label>
             <input 
                 type="email" 
-                id="signup-email" 
-                name="signup-email" 
+                id="signup_email" 
+                name="signup_email" 
                 placeholder="Email"
             />
         </div>
@@ -17,8 +17,8 @@
             <label for="firstname">Firstname</label>
             <input 
                 type="text" 
-                id="signup-firstname" 
-                name="signup-firstname" 
+                id="signup_firstname" 
+                name="signup_firstname" 
                 placeholder="Firstname"
             />
         </div>
@@ -26,8 +26,8 @@
             <label for="password">Password</label>
             <input 
                 type="password" 
-                id="signup-password" 
-                name="signup-password" 
+                id="signup_password" 
+                name="signup_password" 
                 placeholder="Password"
             />
         </div>
@@ -35,15 +35,12 @@
             <label for="password-confirmation">Confirm Password</label>
             <input 
                 type="password" 
-                id="signup-password-confirmation" 
-                name="signup-password-confirmation" 
+                id="signup_password_confirmation" 
+                name="signup_password_confirmation" 
                 placeholder="Confirm Password"
             />
         </div>
         <br>
-        <div>
-        <button type="submit"> Register </button>
-        </div>
 
         <!-- flashing messages -->
         {% with messages = get_flashed_messages(with_categories=true) %} 
@@ -57,6 +54,13 @@
             {% endfor %}
         {% endif %}
         {% endwith %}
+        
+        <br>
+        <div>
+        <button type="submit"> Register </button>
+        </div>
+
+
 
     </form>
 </div>

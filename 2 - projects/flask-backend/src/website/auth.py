@@ -6,7 +6,8 @@ auth = Blueprint('auth', __name__)
 def login():
     if request.method == "POST":
         #Input validation
-        email = request.form.get('login-email')
+        email = request.form.get('login_email')
+        password = request.form.get('login_password')
         return render_template('login_complete.html', email=email)    
     return render_template('login.html')
 
@@ -18,10 +19,10 @@ def logout():
 def signup():
     if request.method == "POST":
         #Catch the input
-        email = request.form.get('signup-email')
-        firstname = request.form.get('signup-firstname')
-        signuppassword = request.form.get('signup-password')
-        confirmationpassword = request.form.get('signup-password-confirmation')
+        email = request.form.get('signup_email')
+        firstname = request.form.get('signup_firstname')
+        signuppassword = request.form.get('signup_password')
+        confirmationpassword = request.form.get('signup_password_confirmation')
 
         #Validate the input
         if len(email) < 6:
