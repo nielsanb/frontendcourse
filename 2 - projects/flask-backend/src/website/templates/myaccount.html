@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} Myaccount {% endblock %}
+
+{% block maincontainer %}
+Welcome!
+    <div>
+        <ul>
+    <li>Firstname: {{ current_user.firstname }}</li>
+    <li>Age: {{ current_user.age }}</li>
+    <li>Emailadress: {{ current_user.email }}</li>
+        </ul>
+    </div>
+{% endblock %}

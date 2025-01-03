@@ -30,57 +30,82 @@ def signup():
             flash('Password must be at least 8 characters long', category='error')
         elif signup_password != signup_password_confirmation:
             flash('Passwords do not match! Please enter the passwords correctly the same.', category='error')
+        elif User.query.filter_by(email=signup_email).first():
+            flash('User already exists.', category='error')
         else:
         #create new user
             new_user = User(
                 email = signup_email,
                 firstname = signup_firstname,
                 age = signup_age,
-                #uses a (oneway) hash, extra salt to ensure that if two users have the same password, then still the hash is unique.
+                #generate_password_hash: uses a (oneway) hash, extra salt to ensure that if two users have the same password, then still the hash is unique.
                 password = generate_password_hash(signup_password, method='pbkdf2:sha256', salt_length=16)
             )
             
+            #add to database
             db.session.add(new_user)
             db.session.commit()
 
+            #login user
+            login_user(new_user, remember=True)
+
             flash('Account created!', category='success')
-            return redirect(url_for('auth.signup_complete'))
+            return redirect(url_for('auth.signup_complete', current_user=current_user))
         
-    return render_template('signup.html')
+    return render_template('signup.html', current_user=current_user)
 
 
 @auth.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        #Validation
+        #Catch the input
         login_email = request.form.get('login_email')
         login_password = request.form.get('login_password')
         
-        user = User.query.filter_by(email=login_email).first()
+        #Validate the input
+        existing_user = User.query.filter_by(email=login_email).first()
         
-        if user:
-            if check_password_hash(user.password, login_password):
-                login_user(user, remember=True)
+        if existing_user:
+            if check_password_hash(existing_user.password, login_password):
+                #Login
+                login_user(existing_user, remember=True)
                 flash('Loggedin succesfully', category='success')
-                return redirect(url_for('auth.login_complete'))
+                return redirect(url_for('auth.login_complete', current_user=current_user))
             else:
                 flash('Password incorrect', category='error')
+                return render_template('login.html', current_user=current_user)
         else:
             flash('Something went wrong.', category='error')
+            return render_template('login.html', current_user=current_user)
 
-    return render_template('login.html')
+    elif request.method == "GET":
+        if current_user.is_authenticated:
+            return redirect(url_for('auth.myaccount', current_user=current_user))
+        else:
+            return render_template('login.html', current_user=current_user)
 
 
 @auth.route('/signup_complete')
+@login_required
 def signup_complete():
-    return render_template('signup_complete.html')
+    return render_template('signup_complete.html', current_user=current_user)
 
 
 @auth.route('/login_complete')
-def signup_complete():
-    return render_template('login_complete.html')
+@login_required
+def login_complete():
+    return render_template('login_complete.html', current_user=current_user)
 
 
 @auth.route('/logout')
+@login_required
 def logout():
-    return 'Logout'
+    logout_user()
+    flash('You succesfully logged out!')
+    return redirect(url_for('auth.login', current_user=current_user))
+
+
+@auth.route('/myaccount')
+@login_required
+def myaccount():
+    return render_template('myaccount.html', current_user=current_user)

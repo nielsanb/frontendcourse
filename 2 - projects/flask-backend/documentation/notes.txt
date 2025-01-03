@@ -168,11 +168,21 @@
     > login_user(user, remember=True)
     > Zie de remember=True, blijft je onthouden tot je uitlogt.
 
-    15b. For the login module to work, you need a #Login Manager in the __init__.py
 
+15b. For the login module to work, you need a #Login Manager in the __init__.py
+    > i.e. we need to tell flask how to login our user
 
-16. Make pages login required with the @login_required
+16. Implement Logout_user() 
 
-17. Use the current_user object to take elements from it
+17. Add the different scenarios to the login/signup/account page based on login:
+    > if current_user.is_authenticated:
+    > elif not current_user.is_authenticated:
+    > @login_required
 
-18. Check developer-tools for the cookies that are used!
+18. Send along the current_user.is_authenticated with the responses: 
+    > You can use the data in the templates
+    > Firstname: {{ current_user.firstname }}
+
+19. Make the navbar conditional.
+
+20. Check developer-tools for the cookies that are used!
