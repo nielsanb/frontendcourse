@@ -1,0 +1,51 @@
+
+*** eerste stappen ***
+boilerplate
+    docs
+    venv
+    src
+        my_package
+            templates
+            static
+            views.py
+            auth.py
+            models.py
+
+setup.py
+pip installs
+__init__.py -> def create_app()
+    def create_app():
+        app = Flask(__name__)
+        return app
+
+main.py
+
+---> Dan heb je de eerste server draaien.
+
+***eerste routes, via blueprints***
+
+---> maken een view./ en /auth.login (nog zonder functionaliteit)
+
+views = Blueprint('views', __name__)
+
+@views.route('/')
+def home():
+    return render_template('home.html')
+
+--- Blueprints importeren en registreren in __init__
+
+from webnotes.views import views
+from webnotes.auth import auth
+
+app.register_blueprint(views)
+app.register_blueprint(auth)
+
+
+*** eerste templates ***
+--- Base.html en html paginas maken met {% block this %}{% endblock %}
+--- Deze renderen met render_template
+
+
+*** Form maken en opvangen ***
+methods = ["GET", "POST"]
+if request.method = "POST":

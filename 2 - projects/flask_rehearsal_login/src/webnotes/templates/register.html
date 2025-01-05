@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block main_container %}
+<h1> Register </h1>
+
+<div>
+    {{ message }}
+</div>
+
+<div>
+    <form method="POST">
+
+    <label> Firstname </label>
+    <input
+        type="text"
+        id="register_firstname"
+        name="register_firstname"
+        placeholder="Firstname"
+    />
+
+    <label> Age </label>
+    <input
+        type="number"
+        id="register_age"
+        name="register_age"
+        placeholder="Age"
+    />
+
+    <label> Email </label>
+    <input
+        type="email"
+        id="register_email"
+        name="register_email"
+        placeholder="Email"
+    />
+
+    <label> Password </label>
+    <input 
+        type="password"
+        id="register_password"
+        name="register_password"
+        placeholder="Password"
+    />
+
+    <button type="submit"> Register </button>
+
+    </form>
+</div>
+{% endblock %}

@@ -186,3 +186,5 @@
 19. Make the navbar conditional.
 
 20. Check developer-tools for the cookies that are used!
+
+############## Notes implementation

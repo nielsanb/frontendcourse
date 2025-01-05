@@ -1,0 +1,2 @@
+SECRET_KEY = 'a1b2c3d4e5'
+DB_NAME = 'WEBNOTES_DB.db'

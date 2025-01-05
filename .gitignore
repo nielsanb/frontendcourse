@@ -1,7 +1,6 @@
 1 - course_code/*
 *.pyc
-2 - projects/flask-backend/venv/*
-2 - projects/flask-backend/website.egg-info/*
+2 - projects/*/website.egg-info/*
 2 - projects/*/venv/*
 2 - projects/*/*.egg-info/
-2 - projects/flask-backend/src/instance/*
+2 - projects/*/src/instance/*
