@@ -3,24 +3,32 @@
 
 - block, inline, inline-block, none
     > most element have by default the block setting.
-    > BLOCK -> every new items goes below the previous.
+    > BLOCK -> element gets placed in A FULL-WIDTH BLOCK 
+        > THUS it takes the whole width
+        > THUS every new items goes below the previous.
         > if object does not fit (e.g. by setting px), it will create a scrollbar.
         > please note that if you do NOT set the width it defaults to 100%, and therefore it will break into the next line.
+        > please note that even if you set the width, this does NOT mean that any other object will get onto its line!
 
-    > INLINE -> Every item gets pasted behind eachother
-        > and also breaks into the next line if the object does not fit. 
+    > INLINE -> The item goes INLINE with the other
+        > Thus: Every item gets pasted behind eachother IN THE SAME LINE
+        > and also breaks into the next line if the object does not fit in the line. 
         > Like text in word.
-        > You canNOT set width and heigth. They will deafult to the size of their content.
+        > You CANNOT set width and heigth. They will default to the size of their content.
 
-    > BLOCK-INLINE -> If the complete element fits the line, it will stay. If not fit complete, it goes below.
+    > BLOCK-INLINE -> 
+        > The block allows us to set width and heigth 
+        > The inline allows use to have elements that go onto the same line!
+        -> Thus: If the complete element fits the line, it will stay. If not fit complete, it goes below.
         > and if still not fit, it will create the scrollbar.
 
     > NONE -> disappear
+        > Would be useful in combination with JS
 
 - Another way to say it:
     > blocks stack vertically/below eachother
     > inline-blocks stack horizontally/nexttoeachother (if it fit completely), and else go below.
-    > inline stacks horizontally/nexttoeachother, and break to the next line (also partially!). Yet an inline element does not remain its size, but only the size of its content.
+    > inline stacks horizontally/nexttoeachother, and break to the next line (also partially!). Yet an inline element does NOT remain its size (set by heigth, width), but only the size of its content.
 
 - span element
     > display property of <span> </span> is by default inline
@@ -28,8 +36,11 @@
 - Please note that some elements have by default some margin (h1, h2, p), while others dont (div).
 - Please note that sometimes whitespace appears between two inline elements, because it is interpreted as a 'spatie/space'.
 
+
+
 *** 49 CSS float ***
-- To wrap text around an element. Like you know from word, when you want an image.
+- To wrap text around an element, you give the element the float property.
+    > It works like word, when you want an image.
     > Please note that for creating layouts in modern websites, you typically would go for better tools like flexbox, grid and bootstrap!
     > Teacher recommends to ONLY use float only for wrapping text around an element.
 - It works when e.g. you would want a 'misshapen L' that would be impossible to make with just the display options.
@@ -40,8 +51,17 @@ float: right;
 clear: left;
 clear: both;
 
+- To make another element (e.g. the footer) ignore the previously set float, use the "clear: both;" property on it!
+
+
+
 *** 50 How to create responsive websites ***
-- Big Screen, laptop, tablet, mobile phones
+- There are many different screensizes:
+    > Big screens
+    > Laptop screens
+    > Tablets
+    > Phones
+
 - Voorbeeld: https://tastybasics.nl/
     > onder 1280: menubar -> hamburger
     > onder 992: 4 columns -> 2x2 columns
@@ -64,3 +84,99 @@ clear: both;
     > menuhamburger heeft een kleine visual-vertraging
         > binnen menu nog meer uitklappers
         > wordt met een '-active' flag gewerkt.
+
+- There are four main ways of making your website responsive:
+    1. Media Queries
+    2. Grid
+    3. Flexbox
+    4. Bootstrap
+
+*** 1. Media Queries
+    : To specify specifically when what happens
+
+    div {
+        heigth: 500px;
+        width: 500px;
+    }
+
+    @media (max-width: 600px) {
+        div {
+            heigth: 250px;
+            width: 250px;
+        }
+    }
+
+*** 2. Grid
+    : Good for 2D grids
+
+    <div class="grid-container">
+        <div class="first card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 200px 200px;
+        gap: 30px;
+    }
+
+    .first {
+        grid-column: span 2;
+    }
+
+    .card {
+        background-color: blue;
+    }
+
+3. Flexbox
+    : Good for 1D line layouts, either row or column
+
+    <div class="flex-container">
+        <div class="first card"></div>
+        <div class="second card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+
+    .card {
+        background-color: blue;
+        border: 30px solid white;
+        heigth: 100px;
+        flex: 1;
+    }
+
+    .first {
+        flex: 2;
+    }
+
+    .second {
+        flex: 0.5;
+    }
+
+4. Bootstrap
+    : External framework that comes with extensive predefined classes
+    : Has a 12-column grid
+
+<link ..... >
+
+<div class="container">
+    <div class="row">
+        <div class="card col-6">
+            card
+        </div>
+        <div class="card col-2">
+            card
+        </div>
+        <div class="card col-4'>
+            card
+        </div>
+    </div>
+</div>
+
+
+
+***51 Media Queries***
