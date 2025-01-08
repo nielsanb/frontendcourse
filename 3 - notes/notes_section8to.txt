@@ -63,6 +63,8 @@ clear: both;
     > Phones
 
 - Voorbeeld: https://tastybasics.nl/
+    > Sowieso mooi om de body een margin-top-left-right van 50px te geven!
+
     > onder 1280: menubar -> hamburger
     > onder 992: 4 columns -> 2x2 columns
     > onder 768: 
@@ -92,7 +94,7 @@ clear: both;
     4. Bootstrap
 
 *** 1. Media Queries
-    : To specify specifically when what happens
+    : To specify specifically when what happens. Its what they call a BREAKPOINT.
 
     div {
         heigth: 500px;
@@ -180,3 +182,20 @@ clear: both;
 
 
 ***51 Media Queries***
+@media (max-width: 600px) {
+        h1 {
+        font-size: 15px
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    h1 {
+        font-size: 15px
+    }
+}
+
+Typical sizes:
+    Mobile Devices: 319px — 480px
+    iPads and Tablets: 481px — 1200px
+    Laptops: 1201px — 1600px
+    Desktops: 1601px and more
