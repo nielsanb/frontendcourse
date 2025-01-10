@@ -1,0 +1,27 @@
+/* Write your code here: */
+/* 
+div > p             = any DIRECT child of <p> of a parent element <div>
+div li              = ALL children <li> of parent <div>
+p.classname         = all <p>'s with class = classname
+ul > p.classname    = all <p>'s of class = classname AND are a direct child of a <ul>
+*/
+
+h1, h2 {
+    color: purple
+}
+
+.box > .done {
+    color: firebrick;
+}
+
+.list li {
+    color: blue;
+}
+
+li.done {
+    color: green
+}
+
+ul > p.done {
+    font-size: 0.5rem;
+}

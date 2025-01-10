@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CSS Positioning Exercise</title>
+  <!--
+    Niels: Note that the parent needs to have its position set
+    , in order for the position: absolute of the red circle to work.
+
+    static/none -> no position set
+    relative -> relative to ITSELF
+    absolute -> relative to its nearest parent (that has position set)
+    fixed -> fixed position, that even ignores the scrollbar
+
+    Note that setting the position: relative to a object WITHOUT
+    setting top, left, right, bottom does NOTHING to the object 
+    in itself. Thus can be safely set!
+
+    Note that if the parent has no position set, it is absolute 
+    to the body (i.e. top-left corner).
+  
+  -->
+
+  <style>
+      body {
+        margin:0;
+      }
+
+      .blue-box {
+        width: 500px;
+        height: 300px;
+        background-color: blue;
+        margin-top: 200px;
+        margin-left: 200px;
+        position: relative
+      }
+
+      .red-circle {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 150px;
+        left: 250px;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
