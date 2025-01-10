@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Scroler</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            margin: 10px;
+        }
+
+        .wrapper {
+            display:flex;
+            gap: 20px;
+            width: 300px;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        .card {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            box-sizing: border-box;
+            width: 300px;
+            background-color: white;
+            border-radius: 14px;
+            padding: 20px 30px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit lorem at nulla dignissim, nec suscipit nisl laoreet. Nullam est turpis, elementum aliquet ante quis, sollicitudin faucibus eros. Nullam aliquet et ex sed rutrum. Sed pretium dui sit amet ligula semper consequat. Cras bibendum molestie nisi ac cursus. Etiam maximus dolor nisl, non mattis mi congue id. Fusce nec velit suscipit, faucibus mauris eu, varius justo.
+            </p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>
+                Nullam eget augue tempor, aliquet felis in, feugiat neque. Cras ut tempor ex. Morbi elementum tristique nunc, quis tempus est pretium viverra. Etiam sollicitudin leo elit, non laoreet mauris elementum sit amet. Pellentesque velit odio, feugiat eu hendrerit in, volutpat at quam. Nulla fringilla vel ligula quis tincidunt. 
+            </p>
+        </div>
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>
+                Quisque enim ex, auctor eget lectus in, tristique vulputate lacus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin ac massa in tortor sollicitudin gravida. Vivamus pellentesque dignissim metus vel posuere. Curabitur et tempus nulla. Proin sodales suscipit arcu sit amet sollicitudin. 
+            </p>
+        </div>
+        <div class="card">
+            <h2>Card 4</h2>
+            <p>
+                Nulla dignissim semper diam accumsan auctor. Proin non vestibulum augue. Sed id velit elementum, tristique sem non, consequat diam. Vivamus sed nunc eros. Nunc bibendum varius elit, vel luctus nibh imperdiet nec. In eget blandit leo. Nunc facilisis justo ac dui consequat interdum. Nulla sit amet augue ac tellus dapibus volutpat at vitae leo. 
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
