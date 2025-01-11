@@ -1,2 +1,4 @@
-https://colorhunt.co/
-https://fonts.google.com/
+colorpalets: https://colorhunt.co/
+fonts: https://fonts.google.com/
+flexbox cheatsheet: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+flexbox traininggame (see settings in footer): https://appbrewery.github.io/flexboxfroggy/

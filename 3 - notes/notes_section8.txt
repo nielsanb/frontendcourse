@@ -94,7 +94,7 @@ clear: both;
     4. Bootstrap
 
 *** 1. Media Queries
-    : To specify specifically when what happens. Its what they call a BREAKPOINT.
+    : To specify specifically when what happens (at which viewport). Its what they call a BREAKPOINT.
 
     div {
         heigth: 500px;
