@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--
+Own excersize to play around with display, position and flexbox.
+
+Tried these! What was the outcome again? Can you imagine? And what if we play around with the total width?
+    body {margin: 0}
+
+    display: block; 
+    display: inline; -> without the text in the divs 
+    display: inline-block;
+    display: none;
+ 
+    position: static
+    position: fixed
+    position: fixed; z-index: -1;
+    position: relative
+    position: absolute;
+
+    display: flexbox
+
+    >> add in here next time!
+-->
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h2 {
+            color: white;
+            margin-left: 5px
+        }
+
+        .container{
+            padding: 30px;
+        }
+
+        .block {
+            width: 250px;
+            height: 250px;
+            display: inline-block;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .white-inside {
+            width: 175px;
+            height: 125px;
+            background-color: white;
+            padding: 5px;
+            position: absolute;
+            left: 30px
+        }
+
+        .white-inside > p {
+            text-align: center;
+        }
+
+        .navy {
+            background-color: navy;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .cyan {
+            background-color: cyan;
+        }
+
+        .green {
+            background-color: green;
+
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+        .pink {
+            background-color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="block navy"> 
+        <h2> Navy </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+
+    <div class="block blue">
+        <h2> Blue </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+
+    <div class="block cyan">
+        <h2> Cyan </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>   
+    <div class="block green">
+        <h2> Green </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    <div class="block yellow">
+        <h2> Yellow </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    <div class="block orange">
+        <h2> Orange </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    <div class="block red">
+        <h2> Red </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    <div class="block pink"> 
+        <h2> Pink </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    <div class="block purple">
+        <h2> Purple </h2>
+        <div class="white-inside">
+            <p>A: Lorum ipsum</p>
+            <p>B: Rumip sumlo</p>
+            <p>C: Mipsu Mloru</p>
+        </div>
+    </div>
+    
+</div>
+
+</body>
+</html>
+
+<!--
+Tried these! What was the outcome again? Can you imagine? And what if we play around with the total width?
+    body {margin: 0}
+        = Removes the default white margin, and thus makes the boxes truely at left-top.
+
+    display: block; 
+        = each item on its own line/row
+    display: inline; -> without the text in the divs 
+        = inline elements adjust their width/heigth to the CONTENT, and thus blocks will disappear. 
+        = When there is content, it will adjust to that content (i.e. only as small as the text, eventhough width and heigth are set)
+    display: inline-block;
+        = block makes that you can set heigth and width
+        = inline makes them stick next to eachother
+        > Please note that the line between the blocks is because the blocks are rendered as text, and therefore there is a space in between (as with words).
+        > set font-size: 0;
+    display: none;
+        = Makes the element disappear
+        > Also makes the rest of the elements rearrange/reorder themselves -indeed- asif the element is not there! 
+
+    position: static
+        = default
+    position: fixed
+        = sets position relative to viewport
+        , and takes the element out of the "normal document flow" z-index=0. Thus one of the boxes moves behind.
+    position: fixed; z-index: -1;
+        = now the box itself is behind the others that shuffle in.
+    position: relative
+        = relative to its OWN regular position.
+        > Thus you need to set top, bottom, left and/or right to move the box
+        > If by that, there is overlap between two elements, they WILL move over eachother!
+        > refer to the z-index again!
+    position: absolute;
+        = "absolute relative to its nearest parent that has a position relative/absolute set" / Or else to the top-left corner
+        > Usefull for elements inside other elements!
+        > Please note that if you do NOT set the ancestors' position, it might lead to unexpected behaviour
+        > Again the element is removed from the "normal document flow".
+
+-->
