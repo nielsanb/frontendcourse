@@ -22,9 +22,25 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
     position: relative
     position: absolute;
 
-    display: flexbox
+    display: flex/inline-flex;
+    flex-wrap: wrap/nowrap;
+    flex-direction: column/row/column-reverse/row-reverse;
 
-    >> add in here next time!
+    Wrap three boxes in another div -> what happens?
+
+    justify-content;
+    align-items;
+    align-content;
+    flex-flow: <direction> <wrap/nowrap>;
+
+    align-self;
+    order;
+
+    flex-basis; Please note that this one is also set at the ITEM!
+    flex-grow;
+    flex-shrink;
+
+    >> Eventually, make a javascipt page that does these things!
 -->
 
     <style>
@@ -39,6 +55,11 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
 
         .container{
             padding: 30px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: space-around;
         }
 
         .block {
@@ -68,6 +89,7 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
 
         .blue {
             background-color: blue;
+            margin-top: 50px;
         }
 
         .cyan {
@@ -76,7 +98,7 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
 
         .green {
             background-color: green;
-
+            display: fixed;
         }
 
         .yellow {
@@ -104,7 +126,6 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
 </head>
 <body>
 <div class="container">
-
     <div class="block navy"> 
         <h2> Navy </h2>
         <div class="white-inside">
@@ -221,5 +242,24 @@ Tried these! What was the outcome again? Can you imagine? And what if we play ar
         > Usefull for elements inside other elements!
         > Please note that if you do NOT set the ancestors' position, it might lead to unexpected behaviour
         > Again the element is removed from the "normal document flow".
+
+    display: flex/inline-flex
+        = set on the container. Now all previously set displays on elements inside will be ingnored! 
+            > Remember that this does NOT apply for position. That does still work!
+            > Note that if you'd wrap two elements in another DIV, they start acting as ONE flexbox item.
+            > Note that 'flex' takes all available width, and 'inline-flex' takes only space needed, thus things can go next to it!
+
+
+    gap/row-gap/column-gap: 10px
+        :
+            > Note that you can give individual items still a margin-top/margin-bottom,
+                > That creates more space, and is on top of gap!
+
+    flex-wrap: nowrap/wrap;
+        > Remeber that flexbox is primarily good at 1D challenges (e.g. nowrap).
+
+    flex-direction: column;
+        =
+            > Can be useful to create web layout.
 
 -->

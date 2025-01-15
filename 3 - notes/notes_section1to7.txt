@@ -91,6 +91,8 @@ for whenever there's something that goes wrong.
 *** 6.4 The box model:
 - Note that the width and heigth are set on the element itself. In addition you should add the padding, border and margin to know the full with of the whole box.
 - In the developertools you can see the box!
+- Please note that if you see margin on the page, but it seems not to be set, it might be FLEXBOX GAP (gap/ow-gap/column-gap)!
+- The same for width/height and flexbox-basis!
 
 *** 6.5 Centering stuff:
 - "Centering elements in css is a whole science on itself"

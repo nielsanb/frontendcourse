@@ -18,11 +18,15 @@
 - Please note that display: flex; is a different system than 
 the traditional block, inline, block-inline.
 
-- When wrapped with a flexbox container, all default display values will be ignored
+- When wrapped with a flexbox container, all default display values will be ignored!
     > e.g. the <p> has a default display: block;
 
--       display: flex (defaults to 100% width, acts like a block)
-    >   display: inline-flex
+- display: flex (defaults to 100% width, acts like a block)
+    > display: inline-flex (now as with block/inline-block other elements can move onto the same row if there is space.)
+
+- gap/row-gap/column-gap: Acts as a sort of margin around boxes
+    > So if you think you see margin, but it seems not to be applied. Check if you are looking at a flexbox!
+
 
 *** 55 Flex direction ***
 flex-direction: row;
@@ -32,8 +36,9 @@ Note that there is a:
     > main axis, and a 
     > cross axis;
 
-flex-basis: 100px -> Expand the cards over the main axis 
+flex-basis: 100px -> Expand the cards over the main axis  
     > (thus the effect is different for row/column direction)
+    > Please note that this can have a similar effect as width/heigth (although different effects under different settings!)
 
 cool tric:
     .flex-container > * {
