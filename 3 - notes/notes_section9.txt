@@ -49,12 +49,9 @@ cool shortcut:
     CTRL + K + U = outcomment toggle
 
 *** 56 Flex Layout ***
-> Remember to apply the flex property to the right PARENT or CHILD.
+> Remember to apply the flex property correctly to the PARENT or the CHILD.
 
-order: 0;
-order: 1; 
-    > CHILD to change the order of the items in the container.
-
+PARENT properties:
 flex-wrap: nowrap; -> just continues on the same line (even out of sight if no space)
 flex-wrap: wrap; -> continues elements on the next line (remaining the full min-width of the elements)
     > PARENT to change behaviour when you run out of width.
@@ -73,9 +70,27 @@ align-content (along the CROSS axis):
     > Only works with flex-wrap: WRAP
     > Only works within the container (so make sure the container has a heigth!)
 
+CHILD properties:
+order: 0;
+order: 1; 
+    > CHILD to change the order of the items in the container.
+
 align-self:
     > CHILD takes one child out of the normal align, and do its own thing.
 
+flex-basis:
+    > CHLID Works on the main-axis (i.e. take into account the flex-direction!)
+    > If there is white space between the items in the flexbox, flex-basis can increase the size of items.
+    > There is a min and max to the effect of flex-basis:
+        > If flex-basis value is smaller than the items (items' content), than it does NOT make the items smaller.
+        > If no white-space left in the flex-direction = row, than it also cannot increase items. 
+            > Note that in flex-direction: column, there is endless space.
+            > The effect is most visible when looking at row responsively
+
+        > Might be a way to fully fill the width.
+
+
+*** Viewport/vh
 > viewport height 
     > 100vh (the heigth of the screen)
     > 70vh (takes 70% of the screen)

@@ -1,6 +1,6 @@
 
 *** eerste stappen ***
-boilerplate
+> boilerplate
     docs
     venv
     src
@@ -11,16 +11,18 @@ boilerplate
             auth.py
             models.py
 
-setup.py
+> setup.py
 pip installs
 __init__.py -> def create_app()
     def create_app():
         app = Flask(__name__)
         return app
 
-main.py
+> main.py
 
 ---> Dan heb je de eerste server draaien.
+
+
 
 ***eerste routes, via blueprints***
 
