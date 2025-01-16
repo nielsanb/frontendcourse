@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+
+      .oswald-500 {
+        font-family: "Oswald", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      .quattrocento-regular {
+        font-family: "Quattrocento", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .pricing-container {
+        display: flex;
+        gap: 25px;
+        height: 350px;
+      }
+
+      .pricing-plan {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: lightsteelblue;
+        border-radius: 5px;
+        width: 250px;
+      }
+
+      .frequent {
+        background-color: green;
+        width: 250px;
+        text-align: center;
+        padding: 3px;
+        color: white;
+        font-family: "Quattrocento", serif;
+        font-weight: 400;
+        font-style: italic;
+        border-radius: 5px;
+        position: fixed;
+        top: 175px
+      }
+
+      .plan-title {
+        font-size: 3.5rem;
+        font-family: "Oswald", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .plan-price {
+        font-size: 1.4rem;
+        font-weight: 900;
+        font-family: "Oswald", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .plan-features {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+
+        list-style: none;
+        padding-left: 0;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        font-family: "Quattrocento", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .plan-button {
+        color: white;
+        background-color: orangered;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+
+        font-family: "Quattrocento", serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container {
+          flex-direction: column;
+        }        
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-price">€9.99/month</div>
+        <div class="plan-title">Basic</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-price">€19.99/month</div>
+        <div class="frequent">Most frequently bought!</div>
+        <div class="plan-title">Standard</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-price">€49.99/month</div>
+        <div class="plan-title">Premium</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
