@@ -13,13 +13,17 @@
     .container {
       color: white;
       border: 5px solid gold;
-      display: flex;
+      display: inline-flex;
       flex-direction: column;
-      width: 100px;
     }
 
     div > * {
-      flex-basis: 100%;
+      flex-basis: 14.28vh;
+    }
+
+    .div2 {
+      width: 100px;
+      height: 1500px;
     }
 
     /*
@@ -46,6 +50,11 @@ children of the .container class.
     <div class="blue">Blue</div>
     <div class="indigo">Indigo</div>
     <div class="purple">Purple</div>
+  </div>
+
+  <div class="div2">
+
+
   </div>
   
 </body>

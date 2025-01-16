@@ -52,6 +52,9 @@ cool shortcut:
 > Remember to apply the flex property correctly to the PARENT or the CHILD.
 
 PARENT properties:
+
+display: flex/inline-flex
+
 flex-wrap: nowrap; -> just continues on the same line (even out of sight if no space)
 flex-wrap: wrap; -> continues elements on the next line (remaining the full min-width of the elements)
     > PARENT to change behaviour when you run out of width.
@@ -95,6 +98,29 @@ flex-basis:
     > 100vh (the heigth of the screen)
     > 70vh (takes 70% of the screen)
 
-*** 57 Flex Layout ***
 Play flexbox froggy a few times!
 https://appbrewery.github.io/flexboxfroggy/
+
+*** 57 Flex Sizing ***
+If you had a website with paragraphs (which have default margins, padding and full width),
+if you put them in a flexbox, this all will be ignored. They are transformed to a 
+flex-items.
+    > flex-items also have particular behaviour. E.g. responsive to width changes.
+
+Priority for flex-items for size
+    > min-width/max-width (automatically default set by content) > flex-basis > width > width of the content
+    > if you set width and flex-basis, the first will be completely ignored.
+    > flex-basis and max-width/min-width CAN be combined!
+        > Please note that with setting min-width it does not respond anymore.
+
+> flex-grow: 100px -> default size
+> flex-grow: 1 -> it is allowed to grow. (i.e. it will stretch)
+> flex-shrink: 1 -> it is allow to shrink (up to its minimum-width, that might be automatically set.)
+> flex: 1 1 0; grow shrink basis.
+> flex 1 == flex 1 1 0; Shorthand option!
+
+
+> mind that flex-basis is by default on auto, which gives larger content large width. 
+    > set it to 0, if you want to have equal flex-items.
+
+
