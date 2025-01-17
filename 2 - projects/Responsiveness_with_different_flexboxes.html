@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 10px;
+        }
+
+        h4 {
+            margin: 10px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            border: 1px solid black;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        .item {
+            border: 1px solid black;
+            background-color: grey;
+            padding: 10px;
+            border-radius: 3px;;
+        }
+
+        .cta {
+            background-color: orangered;
+        }
+
+        .c2 {
+            display: inline-flex;
+        }
+
+        .i3 {
+            flex-basis: 200px;
+        }
+
+        .c4 {
+            display: inline-flex;
+        }
+
+        .i4 {
+            flex: 0 0 200px;
+        }
+
+        .i5 {
+            flex: 1 0 200px;
+        }
+
+        .i6 {
+            flex: 0 1 200px;           
+        }
+
+        .c5 {
+            justify-content: center;
+        }
+
+        .i7 {
+            flex: 0 1 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Play around with resizing the window, and have a proper look!</h1>
+    <h4> display: flex; <br> (item width set to content, item min-width set to largest word in item "programming") </h4>
+
+    <div class="container">
+        <div class="item">Home</div>
+        <div class="item">About</div>
+        <div class="item">Contact Us</div>
+        <div class="item">The Best Programming School</div>
+        <div class="item cta">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: inline-flex;  <br>  (container now shrinks as much as possible)</h4>
+    <div class="container c2">
+        <div class="item i2">Home</div>
+        <div class="item i2">About</div>
+        <div class="item i2">Contact Us</div>
+        <div class="item i2">The Best Programming School</div>
+        <div class="item cta i2">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: flex; <br> flex-basis: 200px  <br> (if possible; now grow the items until 200px, notice that the shrinking goes equally in each item now! Set tab to width: 625px for comparison! </h4>
+    <div class="container c3">
+        <div class="item i3">Home</div>
+        <div class="item i3">About</div>
+        <div class="item i3">Contact Us</div>
+        <div class="item i3">The Best Programming School</div>
+        <div class="item cta i3">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: inline-flex; <br> flex-basis: 150px <br> (note, that the container keeps to the minimum width possible! And thus the items do not adhere to their flex-basis!</h4>
+    <div class="container c4">
+        <div class="item i3">Home</div>
+        <div class="item i3">About</div>
+        <div class="item i3">Contact Us</div>
+        <div class="item i3">The Best Programming School</div>
+        <div class="item cta i3">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: inline-flex; <br> flex: 0 0 200px <br> (container still adheres tho the theoretically minimum of items, yet grow 0 and shrink 0 on the items makes the overflow their container.) </h4>
+    <div class="container c4">
+        <div class="item i4">Home</div>
+        <div class="item i4">About</div>
+        <div class="item i4">Contact Us</div>
+        <div class="item i4">The Best Programming School</div>
+        <div class="item cta i4">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: flex; <br> flex: 1 0 200px; <br> (items can and will grow, items do NOT shrink beyond the flex-basis!) </h4>
+    <div class="container">
+        <div class="item i5">Home</div>
+        <div class="item i5">About</div>
+        <div class="item i5">Contact Us</div>
+        <div class="item i5">The Best Programming School</div>
+        <div class="item cta i5">Register Now!</div>
+    </div>
+    <br><hr>
+
+    <h4> display: flex; <br> flex: 0 1 200px; <br> (items cannot and will not grow, items can shrink beyond the flex-basis! Notice how display:flex; does make the container grow though! These are ITEM settings) </h4>
+    <div class="container">
+        <div class="item i6">Home</div>
+        <div class="item i6">About</div>
+        <div class="item i6">Contact Us</div>
+        <div class="item i6">The Best Programming School</div>
+        <div class="item cta i6">Register Now!</div>
+    </div>    
+    <br><hr>
+
+    <h4> display: flex; <br> justify-content: center; <br> flex: 0 1 150px; <br> (Now dont forget, we can also apply the container parameters.) </h4>
+    <div class="container c5">
+        <div class="item i7">Home</div>
+        <div class="item i7">About</div>
+        <div class="item i7">Contact Us</div>
+        <div class="item i7">The Best Programming School</div>
+        <div class="item cta i7">Register Now!</div>
+    </div>    
+    <br><hr>
+
+
+</body>
+</html>

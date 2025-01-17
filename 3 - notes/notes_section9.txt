@@ -22,7 +22,7 @@ the traditional block, inline, block-inline.
     > e.g. the <p> has a default display: block;
 
 - display: flex (defaults to 100% width, acts like a block)
-    > display: inline-flex (now as with block/inline-block other elements can move onto the same row if there is space.)
+> display: inline-flex (note that the container becomes stubborn to growing! Even if the items would want to!)
 
 - gap/row-gap/column-gap: Acts as a sort of margin around boxes
     > So if you think you see margin, but it seems not to be applied. Check if you are looking at a flexbox!
@@ -110,9 +110,14 @@ flex-items.
 Priority for flex-items for size
     > min-width/max-width (automatically default set by content) > flex-basis > width > width of the content
     > if you set width and flex-basis, the first will be completely ignored.
+    > Please note that if you set a width/flex-basis, as soon as there is NOT enough space IT WILL SHRIK NEVERTHELESS!
+        > The smallest shink will be to the longst word within the button.
+        > If you want a minimum/maximum that is bigger, use min-width (aka it will not shrink beyond) and max-width (aka it will not grow beyond!).
+
     > flex-basis and max-width/min-width CAN be combined!
         > Please note that with setting min-width it does not respond anymore.
 
+> flex-basis: ;
 > flex-grow: 100px -> default size
 > flex-grow: 1 -> it is allowed to grow. (i.e. it will stretch)
 > flex-shrink: 1 -> it is allow to shrink (up to its minimum-width, that might be automatically set.)
