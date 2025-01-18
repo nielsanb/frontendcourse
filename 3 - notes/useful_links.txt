@@ -1,4 +1,11 @@
+COLOR
 colorpalets: https://colorhunt.co/
+gradient-creator: https://cssgradient.io/
+
+FONT
 fonts: https://fonts.google.com/
+font pairings: https://www.pagecloud.com/blog/best-google-fonts-pairings
+
+FLEXBOX
 flexbox cheatsheet: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 flexbox traininggame (see settings in footer): https://appbrewery.github.io/flexboxfroggy/
