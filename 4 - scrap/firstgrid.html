@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body {
+            margin: 50px;
+        }
+
+         .container{
+            display:grid;
+            border: 1px solid black;
+
+            /* Please note that if the container is bigger than the grid-items, it will create (beatifully aligned) gaps */
+            /* Please also note that it is 'item+gap, item+gap, item+gap', and then organized from the top left! */
+            width: 180px; 
+            height: 180px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+         }
+
+         .grid-item{
+            width: 30px;
+            height: 30px;
+         }
+
+         .blue{
+            background-color: blue;
+         }
+
+         .red {
+            background-color: red;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grid-item blue"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item blue"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item blue"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item blue"></div>
+        <div class="grid-item red"></div>
+        <div class="grid-item blue"></div>
+    </div>
+</body>
+</html>

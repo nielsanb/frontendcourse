@@ -1,0 +1,25 @@
+*** Section 10: GRID ***
+*** 60 Display: GRID ***
+- More easy for (more complex) 2D layouts
+- In particular, when you want table-style alignment, aka the lines to go straigth down.
+
+.container{
+    display: grid;
+    width: 90px;
+    heigth: 90px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid-item{
+    width: 30px;
+    heigth: 30px;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}

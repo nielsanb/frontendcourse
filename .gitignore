@@ -4,3 +4,4 @@
 2 - projects/*/venv/*
 2 - projects/*/*.egg-info/
 2 - projects/*/src/instance/*
+0 - code_of_the_course/*
