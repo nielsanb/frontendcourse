@@ -1,0 +1,63 @@
+body{
+    margin-top: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    background-color: darkblue;
+    color:ghostwhite;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation-duration: 5s;
+    animation-name: logo-animation;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: none;
+
+    /* You can do a shorthand */
+    /* animation: 5s logo-animation ease-in-out 1s infinite none */
+
+    animation-play-state: running;
+}
+
+.logo:hover{
+    animation-play-state: paused;
+}
+
+@keyframes logo-animation{
+    0%{
+
+    }
+
+    25%{
+        border-radius: 50%;
+        transform: rotate(360deg);
+    }
+
+    50%{
+        border-radius: 50%;
+        transform: rotate(360deg);        
+    }
+
+    75%{
+        border-radius: 0%;
+        transform: rotate(720deg);
+    }
+
+    100%{
+        border-radius: 0%;
+        transform: rotate(720deg);
+    }
+
+
+}
