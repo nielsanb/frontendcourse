@@ -1,0 +1,8 @@
+strings in "double quotes"
+booleans lowercase: true false
+
+var a = "niels"
+
+alwaysGiveYourVariablesMeaningfulNames
+
+camelCase
